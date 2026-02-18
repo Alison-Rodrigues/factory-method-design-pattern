@@ -1,5 +1,6 @@
 package org.example.beginner.account;
 
+// Product (Defines the object kind that must be created)
 public interface Account {
-    void calculateFees();
+    double calculateFees(double amount);
 }

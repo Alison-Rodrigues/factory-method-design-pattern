@@ -1,21 +1,19 @@
 package org.example.beginner.account;
 
-//Concrete Product (concrete product that implements the product)
-public class CheckingAccount implements Account {
+public class SalaryAccount implements Account{
 
     private final double baseTax;
     private final double openTax;
 
-    public CheckingAccount(double baseTax, double openTax) {
+    public SalaryAccount(double baseTax, double openTax) {
         this.baseTax = baseTax;
         this.openTax = openTax;
     }
 
-
     @Override
     public double calculateFees(double amount) {
         double totalTax = this.baseTax + this.openTax;
-        System.out.println(String.format("Taxa de conta corrente [%s]", totalTax));
+        System.out.println(String.format("Taxa para conta salário [%s]", totalTax));
         System.out.println(String.format("Valor do depósito com a taxa [%s]", amount + totalTax));
 
         return totalTax;
